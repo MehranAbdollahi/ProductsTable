@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div id="ProductTableContainer"></div>
+<script type="text/javascript">
+$.ajaxSetup({
+    contentType: 'application/json',
+    dataType: 'json',
+    headers: {
+        Accept: '*/*'
+    }
+});
+        $(document).ready(function () {
+            $('#ProductTableContainer')
+            .jtable({
+                title: 'Table of people',
+                actions: {
+                    listAction: 'http://localhost:5181/Product/ProductsList',
+                    createAction: 'http://localhost:5181/Product/CreateProduct',
+                    updateAction: 'http://localhost:5181/Product/UpdateProduct',
+                    deleteAction: 'http://localhost:5181/Product/DeleteProduct'
+                },
+                fields: {
+                    Id: {
+                        key: true,
+                        list: false
+                    },
+                    Title: {
+                        title: 'Title',
+                        width: '25%'
+                    },
+                    Description: {
+                        title: 'Description',
+                        width: '25%'
+                    },
+                    Count: {
+                        title: 'Count',
+                        width: '25%'
+                    },
+                    Price: {
+                        title: 'Price',
+                        width: '25%',
+                        type: 'long'
+                    }
+                }
+            })
+            .jtable('load');
+        });
+    
+</script>
