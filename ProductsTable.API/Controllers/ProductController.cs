@@ -31,17 +31,45 @@ namespace ProductsTable.API.Controllers
             }
         }
         [HttpPost("/Product/CreateProduct")]
-        public JsonResult CreateProduct(AddProductDto product)
+        public JsonResult CreateProduct([FromForm]AddProductDto product)
         {
             try
             {
                 Product addedProduct = _productService.AddProduct(product);
 
-                return new JsonResult(new { Result = "OK", Records = addedProduct });
+                return new JsonResult(new { Result = "OK", Record = addedProduct });
             }
             catch (Exception ex)
             {
 
+                return new JsonResult(new { Result = "ERROR", Message = ex.Message });
+            }
+        }
+        [HttpPost("/Product/UpdateProduct")]
+        public JsonResult UpdatePerson([FromForm] ProductDto product)
+        {
+            try
+            {
+                Product editedProduct = _productService.EditProduct(product);
+
+                return new JsonResult(new { Result = "OK"});
+            }
+            catch (Exception ex)
+            {
+                return new JsonResult(new { Result = "ERROR", Message = ex.Message });
+            }
+        }
+        [HttpPost("/Product/DeleteProduct")]
+        public JsonResult DeletePerson([FromForm] long Id)
+        {
+            try
+            {
+                _productService.DeleteProduct(Id);
+
+                return new JsonResult(new { Result = "OK" });
+            }
+            catch (Exception ex)
+            {
                 return new JsonResult(new { Result = "ERROR", Message = ex.Message });
             }
         }

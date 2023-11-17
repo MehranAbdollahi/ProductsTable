@@ -1,6 +1,8 @@
-﻿using ProductsTable.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using ProductsTable.Domain;
+using ProductsTable.Infrastructure.Static;
 
-namespace ProductsTable.Infrastructure.Static.Products;
+namespace ProductsTable.Infrastructure.Products;
 
 public class ProductRepository : IProductRepository
 {

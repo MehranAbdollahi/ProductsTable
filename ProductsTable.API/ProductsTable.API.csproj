@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProductsTable.Application\ProductsTable.Application.csproj" />
-    <ProjectReference Include="..\ProductsTable.Infrastructure.Static\ProductsTable.Infrastructure.Static.csproj" />
+    <ProjectReference Include="..\ProductsTable.Infrastructure.Static\ProductsTable.Infrastructure.csproj" />
   </ItemGroup>
   
 

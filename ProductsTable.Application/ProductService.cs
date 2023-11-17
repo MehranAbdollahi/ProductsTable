@@ -25,10 +25,9 @@ public class ProductService : IProductService
     {
         var product = _repository.GetById(command.Id);
         product.Edit(command.Title, command.Description, command.Count, command.Price);
-        var newProduct = _repository.GetById(command.Id);
-        _repository.Update(product);
+
         _repository.Save();
-        return newProduct;
+        return product;
     }
 
     public ProductDto GetProductById(long productId)

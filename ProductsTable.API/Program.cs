@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using ProductsTable.Application;
 using ProductsTable.Domain;
+using ProductsTable.Infrastructure.Products;
 using ProductsTable.Infrastructure.Static;
-using ProductsTable.Infrastructure.Static.Products;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsTable.Domain", "Pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsTable.Application", "ProductsTable.Application\ProductsTable.Application.csproj", "{562B151A-C0C1-4054-83A0-68EFFA610627}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsTable.Infrastructure.Static", "ProductsTable.Infrastructure.Static\ProductsTable.Infrastructure.Static.csproj", "{7E3D4D3B-6021-4CDE-82E4-5452942EDCD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsTable.Infrastructure", "ProductsTable.Infrastructure.Static\ProductsTable.Infrastructure.csproj", "{7E3D4D3B-6021-4CDE-82E4-5452942EDCD5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
